@@ -1,0 +1,29 @@
+{
+  "name": "tumblewood",
+  "version": "1.0.0",
+  "description": "A wooden marble run you build on a pegboard, and hear.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "author": "Michael Shadpour (https://michaelshadpour.com)",
+  "homepage": "https://michaelshadpour.com/work/tumblewood",
+  "repository": "github:realmichaelshad/tumblewood",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "node scripts/serve.mjs",
+    "test": "vitest run",
+    "test:e2e": "npm run build && playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^24.19.2",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.6",
+    "vitest": "^5.1.1"
+  },
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource-variable/figtree": "^5.3.0"
+  }
+}

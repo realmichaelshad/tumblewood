@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Tumblewood Chime Run, a marble run you can hear</title>
+    <meta name="description" content="A wooden marble run you build on a pegboard. Every marble that hits a chime plays a note, so the run you build is a tune." />
+    <meta name="theme-color" content="#2f6fd0" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  </head>
+  <body>
+    <div class="page">
+      <section class="stage" aria-label="The Chime Run">
+        <header class="bar">
+          <div class="brand">
+            <span class="wordmark">Tumblewood</span>
+            <span class="product">Chime Run</span>
+          </div>
+          <button id="mute" class="mute" type="button" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="ico-on"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M15.5 8.8a4.4 4.4 0 0 1 0 6.4M18 6.6a7.6 7.6 0 0 1 0 10.8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="ico-off"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M16 9.5l5 5M21 9.5l-5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+            <span class="mute-label">Sound on</span>
+          </button>
+        </header>
+        <div class="board-wrap">
+          <canvas id="toy" role="img" aria-label="A pegboard with beech ramps, enamel chimes and brass bells. Drag pieces to move them, tap a ramp or chime to turn it the other way."></canvas>
+          <noscript><p class="nojs">The Chime Run needs JavaScript to play.</p></noscript>
+        </div>
+        <div class="controls">
+          <button id="drop" class="drop" type="button">Drop</button>
+          <button id="beat" class="beat" type="button" aria-pressed="false"><span class="beat-dot" aria-hidden="true"></span><span class="beat-label">Keep dropping</span></button>
+        </div>
+      </section>
+
+      <main class="info">
+        <section class="kit" aria-labelledby="kit-h">
+          <h2 id="kit-h">What is in your kit</h2>
+          <p class="lede">The kit is whatever is on your board. Move, add or take away a piece and this list changes with it.</p>
+          <ul class="kit-list" id="kit-list"></ul>
+          <div class="kit-total"><span>Your kit</span><strong id="kit-total">$0</strong></div>
+          <div class="kit-actions">
+            <button id="share" class="link-btn" type="button">Copy a link to this run</button>
+            <button id="reset" class="link-btn" type="button">Start over</button>
+          </div>
+          <p class="share-note" id="share-note" role="status"></p>
+          <figure class="photo photo-parts">
+            <img src="./src/assets/tumblewood-parts.webp" width="1000" height="1250" loading="lazy" alt="The parts of a Chime Run laid out on yellow paper: six beech ramps, eight enamel chimes from red to pink, two brass bells, beech pegs, a cotton bag of glass marbles and the catch tray." />
+            <figcaption>Every part we make for the Chime Run.</figcaption>
+          </figure>
+        </section>
+
+        <section class="craft" aria-labelledby="craft-h">
+          <h2 id="craft-h">How it is made</h2>
+          <p>The ramps are solid European beech. Each groove is routed in one pass and sanded until a marble runs down it without a rattle.</p>
+          <p>Each chime is an aluminum bar on soft mounts. A bar's length sets its note, so the eight are cut to a five-note scale: any run you build stays in tune.</p>
+          <p>The bells are cast brass. The board is birch plywood with a peg hole every inch, finished with oil and beeswax.</p>
+        </section>
+
+        <section class="order" aria-labelledby="order-h">
+          <figure class="photo photo-kit">
+            <img src="./src/assets/tumblewood-kit.webp" width="1400" height="933" loading="lazy" alt="A finished Chime Run hanging on a blue wall: zigzag beech ramps, a row of eight colored chimes, two brass bells and a catch tray with marbles." />
+          </figure>
+          <h2 id="order-h">Order this kit</h2>
+          <p class="order-sum" id="order-sum"></p>
+          <button id="order" class="order-btn" type="button">Order this kit</button>
+          <p class="demo-note">Demo. Nothing is charged or sent.</p>
+          <p class="order-done" id="order-done" role="status" hidden></p>
+        </section>
+
+        <footer class="foot">
+          <p>Concept project. Tumblewood is a fictional brand.</p>
+          <p><a href="https://michaelshadpour.com" target="_blank" rel="noopener">Design and build: Michael Shadpour</a></p>
+        </footer>
+      </main>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
